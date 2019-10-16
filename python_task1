@@ -1,0 +1,44 @@
+#!/bin/python
+
+def collecting():
+	 print(f'x collected with y is ({x+y})')
+
+def subtraction():
+	print(f'x substraction of y is ({x-y})')
+
+def multiplication():
+	print(f'x multiplied by y is ({x*y})')
+
+def division():
+	print(f'x divided by y is ({x/y})')
+
+def integer_division():
+	print(f'x is an integer divisible by y ({x//y})')
+
+def quitApp():
+	print('quit app')
+	quit()
+
+if __name__ == '__main__':
+	while True:
+		print ('Plese enter your numbers')
+		x = int(input('x = '))
+		y = int(input('y = '))
+		action = {
+			'+':collecting
+			, '-':subtraction
+			, '*':multiplication
+			, '/':division
+			, '//':integer_division
+			, 'q':quitApp
+		}
+
+		ch = input('Command [+:collecting,-:subtraction,*:multiplication,/:division,//:integer_division,q:quit]:')
+
+		if ch in action:
+			action[ch]()
+				
+		else:
+			print(f'Invalid Command:{ch}')
+
+			

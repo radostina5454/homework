@@ -14,6 +14,9 @@ def factor(n):
 
 if __name__ == '__main__':
 	n = eval(input("Input a needed factorial: "))
-	f = factor(n)
-	print(f'The value of the {n}! is: {f} ')
+	if (n < 0):
+		print('Wrong input! Cannot use negative numbers')
+	else:
+		f = factor(n)
+		print(f'The value of the {n}! is: {f} ')
 	

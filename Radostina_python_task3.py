@@ -12,7 +12,7 @@ def sum1(lst):
 
 if __name__ == '__main__':
 
-	t=[[1,2,7],4,3,5,[3,4]]
+	t=[[1,2,10],4,3,5,[3,4]]
 	result = sum1(t)
 
-print(f' Sum is:{result}')
+print(f'Sum of lists {t} is :{result}')

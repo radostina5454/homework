@@ -1,11 +1,16 @@
 #!/bin/python3
 
+def measure(func):
+    def wrapper(*args):
+        c= func(*args)
+        return c       
+    return wrapper
 
-def glavna(func,*args):
-	c= func(*args)
-	return c
+@measure
+def sum_two_numbers(a, b): 
+    return a + b 
+  
+a, b = 1, 2
+  
 
-
-
-s = glavna(sum, [6,3,2,5,4])
-print(f'{s}')
+print("Sum =", sum_two_numbers(a, b)) 

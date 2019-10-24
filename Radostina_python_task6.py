@@ -1,12 +1,12 @@
 #!/bin/python3
 
-def measure(func):
+def cmap(func):
     def wrapper(*args):
         c= func(*args)
         return c       
     return wrapper
 
-@measure
+@cmap
 def sum_two_numbers(a, b): 
     return a + b 
   
